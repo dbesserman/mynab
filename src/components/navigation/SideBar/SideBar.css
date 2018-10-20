@@ -1,0 +1,18 @@
+.SideBar {
+  width: 255px;
+  background: rgb(44, 151, 173);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.SideBar h1 {
+  display: flex;
+  align-items:center;
+  font-weight: bold;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 19px;
+}
