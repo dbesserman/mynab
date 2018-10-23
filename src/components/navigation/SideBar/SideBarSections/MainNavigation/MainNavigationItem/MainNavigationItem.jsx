@@ -16,7 +16,7 @@ class MainNavigationItem extends React.Component {
         name={this.props.itemName}
         onClick={(e) => this.props.activeItemHandler(e, this.props.itemName)}
       >
-        <i></i>
+        <i className="icon-budget"></i>
         <span>{this.props.title}</span>
       </li>
     )

@@ -1,9 +1,13 @@
 import React from 'react';
-import SideBar from '../../components/navigation/SideBar/SideBar';
+import SideBar from '../../components/navigation/SideBar/SideBar.jsx';
+import Main from '../../containers/Main/Main.jsx';
 
 const layout = () => {
   return (
-    <SideBar />
+    <>
+      <SideBar />
+      <Main />
+    </>
   )
 }
 

@@ -1,0 +1,26 @@
+.MonthPicker {
+  display: flex;
+  color: #fff;
+  align-items: center;
+}
+
+.MonthPicker span {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+
+.NextMonth,
+.PrevMonth {
+  height: 36px;
+  width: 36px;
+  border-radius: 100%;
+  border: 3px solid #23b2ce;
+}
+.NextMonth {
+  background: url(../../../../assets/icons/chevron-right.svg);
+}
+
+.PrevMonth {
+  background: url(../../../../assets/icons/chevron-left.svg);
+}

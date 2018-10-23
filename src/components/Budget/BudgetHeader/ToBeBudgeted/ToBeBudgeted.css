@@ -1,0 +1,39 @@
+.ToBeBudgeted {
+  display: flex;
+  align-items: center;
+}
+
+.content, .pointer {
+  background-color: #16a33e;
+}
+
+.content {
+  display: flex;
+  padding: 12px;
+  border-radius: 6px;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  z-index: 1;
+}
+
+.pointer {
+  height: 16px;
+  width: 16px;
+  margin-left: -8px;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+.amount {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.caption {
+  margin-top: 10px;
+  color: #003440;
+  font-size: 14px;
+  font-style: italic;
+}

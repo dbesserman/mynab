@@ -1,0 +1,12 @@
+.BudgetHeader {
+  display: flex;
+  height: 90px;
+  padding: 9px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #003540;
+}
+
+.placeholder {
+  width: 100px;
+}

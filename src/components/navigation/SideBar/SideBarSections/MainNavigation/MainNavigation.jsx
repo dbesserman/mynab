@@ -1,5 +1,5 @@
 import React from 'react';
-import MainNavigationItem from './MainNavigationItem/MainNavigationItem';
+import MainNavigationItem from './MainNavigationItem/MainNavigationItem.jsx';
 import classes from './MainNavigation.css';
 
 const mainNavigation = (props) => {
