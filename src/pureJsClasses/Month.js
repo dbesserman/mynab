@@ -1,4 +1,4 @@
-class MonthOfAYear {
+class Month {
   constructor(monthIndex, year) {
     this.month = monthIndex;
     this.year = year;
@@ -16,4 +16,4 @@ class MonthOfAYear {
   }
 }
 
-export default MonthOfAYear;
+export default Month;

@@ -5,9 +5,9 @@ const budget = (props) => {
   return (
     <>
       <BudgetHeader
-        currentMonthOfAYear={props.currentMonthOfAYear}
+        currentMonth={props.currentMonth}
         previousMonthOfYear={props.previousMonthOfYear}
-        nextMonthOfAYear={props.nextMonthOfAYear}
+        nextMonth={props.nextMonth}
         toBeBudgeted={props.toBeBudgeted}
       />
     </>

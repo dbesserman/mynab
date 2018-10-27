@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MonthOfAYear from '../../../../pureJsClasses/MonthOfAYear.js';
+import Month from '../../../../pureJsClasses/Month.js';
 import classes from './MonthPicker.css';
 
 class MonthPicker extends React.Component {
@@ -11,9 +11,9 @@ class MonthPicker extends React.Component {
           className={classes.PrevMonth}
           onClick={this.props.previousMonthOfYear}
         ></i>
-        <span>{this.props.currentMonthOfAYear.toString()}</span>
+        <span>{this.props.currentMonth.toString()}</span>
         <i className={classes.NextMonth}
-          onClick={this.props.nextMonthOfAYear}
+          onClick={this.props.nextMonth}
         ></i>
       </div>
     )
@@ -22,8 +22,8 @@ class MonthPicker extends React.Component {
 
 MonthPicker.propTypes = {
   previousMonthOfYear: PropTypes.func,
-  currentMonthOfAYear: PropTypes.instanceOf(MonthOfAYear),
-  nextMonthOfAYear: PropTypes.func,
+  currentMonth: PropTypes.instanceOf(Month),
+  nextMonth: PropTypes.func,
 }
 
 export default MonthPicker;

@@ -1,14 +1,14 @@
 import React from 'react';
 import Budget from '../../components/Budget/Budget.jsx';
-import MonthOfAYear from '../../pureJsClasses/MonthOfAYear';
+import Month from '../../pureJsClasses/Month';
 import classes from './Main.css';
 
 class Main extends React.Component {
   constructor() {
     super();
-    const monthOfAYear = new MonthOfAYear(0, 2018);
+    const month = new Month(0, 2018);
     this.state = {
-      currentMonthOfAYear: monthOfAYear,
+      currentMonth: month,
       budget: {
         toBeBudgeted: 1234,
       }
@@ -17,29 +17,29 @@ class Main extends React.Component {
 
   previousMonthOfYear = () => {
     this.setState((previousState) => {
-      let month = previousState.currentMonthOfAYear.month;
-      let year = previousState.currentMonthOfAYear.year;
+      let month = previousState.currentMonth.month;
+      let year = previousState.currentMonth.year;
 
       month--
       if (month < 0) {
         month = 11
         year--
       }
-      return { currentMonthOfAYear: new MonthOfAYear(month, year)};
+      return { currentMonth: new Month(month, year)};
     })
   }
 
-  nextMonthOfAYear = () => {
+  nextMonth = () => {
     this.setState(previousState => {
-      let month = previousState.currentMonthOfAYear.month;
-      let year = previousState.currentMonthOfAYear.year;
+      let month = previousState.currentMonth.month;
+      let year = previousState.currentMonth.year;
 
       month = (month + 1) % 12;
       if (month === 0) {
         year++;
       }
 
-      return { currentMonthOfAYear: new MonthOfAYear(month, year) }
+      return { currentMonth: new Month(month, year) }
     });
   }
 
@@ -47,9 +47,9 @@ class Main extends React.Component {
     return (
       <main className={classes.Main}>
         <Budget
-          currentMonthOfAYear={this.state.currentMonthOfAYear}
-          previousMonthOfYear={this.previousMonthOfYear}
-          nextMonthOfAYear={this.nextMonthOfAYear}
+          currentMonth={this.state.currentMonth}
+          previousMonth={this.previousMonthOfYear}
+          nextMonth={this.nextMonth}
           toBeBudgeted={this.state.budget.toBeBudgeted}
         />
       </main>
