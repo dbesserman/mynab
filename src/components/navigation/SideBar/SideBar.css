@@ -1,9 +1,14 @@
 .SideBar {
+  position: fixed;
   display: inline-block;
+  top: 0;
+  bottom: 0;
+  left: 0;
   width: 255px;
-  height: 100%;
   background: rgb(44, 151, 173);
   color: #fff;
+  z-index: 100;
+  flex-shrink: 0;
 }
 
 .SideBar h1 {

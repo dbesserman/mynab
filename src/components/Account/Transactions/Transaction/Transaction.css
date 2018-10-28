@@ -1,0 +1,62 @@
+.Transaction {
+  display: flex;
+  height: 22px;
+  border-top: none;
+}
+
+.future {
+  background-color: #e7eaeb;
+  color: #8e9fb0;
+  font-style: italic;
+}
+
+.Transaction td {
+  display: flex;
+  width: 120px;
+  padding: 4px;
+  border-right: 1px solid #dfe4e9;
+  border-bottom: 1px solid #dfe4e9;
+  font-size: 13px;
+  align-items: center;
+}
+
+td.account {
+  width: 180px;
+}
+
+td.memo {
+  width: 300px;
+}
+
+td.payee {
+  width: 200px;
+}
+
+td.category {
+  width: 450px;
+}
+
+td.clearance {
+  width: 30px;
+  justify-content: center;
+}
+
+.clearanceButton {
+  width: 14px;
+  height: 14px;
+  font-size: 10px;
+  color: #fff;
+  background-color: #aca4a4;
+  border-radius: 100%;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.clearanceButtonCleared {
+  background-color: #16a336;
+}
+
+.amount {
+  justify-content: flex-end;
+}

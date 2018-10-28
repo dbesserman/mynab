@@ -1,0 +1,60 @@
+.Transactions {
+  color: #4c7079; 
+  overflow: hidden;
+}
+
+.Transactions thead tr {
+  display: flex;
+  height: 25px;
+  border: 1px solid #dfe4e9;
+}
+
+.Transactions th {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  width: 120px;
+  height: 100%;
+  text-align: center;
+  border-right: 1px solid #dfe4e9;
+  text-transform: uppercase;
+  padding: 0 8px;
+}
+
+.Transactions th:first-child {
+  border-left: none;
+}
+
+th.account {
+  width: 180px;
+}
+
+th.memo {
+  width: 300px;
+}
+
+th.payee {
+  width: 200px;
+}
+
+th.category {
+  width: 450px;
+}
+
+th.clearance {
+  width: 30px;
+  text-align:center;
+}
+
+th.clearance span {
+  display: flex;
+  width: 14px;
+  height: 14px;
+  background: #4c7079;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 8px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
