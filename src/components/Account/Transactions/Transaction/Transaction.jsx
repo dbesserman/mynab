@@ -16,7 +16,7 @@ class Transaction extends React.Component {
       return null;
     }
 
-    return `${cents / 100} €`;
+    return `${Math.abs(cents) / 100} €`;
   }
 
   formatDate = (date) => {
@@ -56,8 +56,12 @@ class Transaction extends React.Component {
         <td className={classes.payee}><span>{this.props.payee}</span></td>
         <td className={classes.category}><span>{this.props.category}</span></td>
         <td className={classes.memo}><span>{this.props.memo}</span></td>
-        <td className={classes.amount}><span>{this.formatAmount(this.props.outflow)}</span></td>
-        <td className={classes.amount}><span>{this.formatAmount(this.props.inflow)}</span></td>
+        <td className={classes.amount}>
+          <span>{this.props.variation < 0 ? this.formatAmount(this.props.variation) : null}</span>
+        </td>
+        <td className={classes.amount}>
+          <span>{this.props.variation > 0 ? this.formatAmount(this.props.variation) : null}</span>
+        </td>
         <td className={classes.clearance}>
           {
             this.dateInPast(this.props.date) ?

@@ -19,23 +19,23 @@ class Main extends React.Component {
       transactions: [
         {
           account: 'BNP', date: new Date('October 29, 2345 14:18:30'), payee: 'Myself',
-          category: 'Future Salary', inflow: 98765432, cleared: false, id: 5
+          category: 'Future Salary', variation: 987, cleared: false, id: 5
         },
         {
           account: 'BNP', date: new Date('October 28, 2345 14:18:30'), payee: 'Tesla',
-          category: 'Future Car', outflow: 3000000, cleared: false, id: 4
+          category: 'Future Car', variation: -3000, cleared: false, id: 4
         },
         {
           account: 'BNP', date: new Date('October 27, 2345 14:18:30'), payee: 'Amazon',
-          category: 'Future Book', outflow: 30, cleared: false, id: 3
+          category: 'Future Book', variation: -30, cleared: false, id: 3
         },
         {
           account: 'BNP', date: new Date('October 28, 2018 14:18:30'), payee: 'Amazon',
-          category: 'Books', outflow: 3000, cleared: false, id: 2
+          category: 'Books', variation: -3000, cleared: false, id: 2
         },
         {
           account: 'BNP', date: new Date('October 27, 2018 14:45:30'), payee: 'Administration',
-          category: 'Taxes', outflow: 45678, cleared: false, id: 1
+          category: 'Taxes', variation: -45678, cleared: true, id: 1
         }
       ]
     };

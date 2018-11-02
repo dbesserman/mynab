@@ -1,0 +1,24 @@
+.BalanceItem {
+  display: flex;
+  height: 32px;
+  padding: 0 10px;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.balanceCaption {
+  color: #fff;
+  font-size: 12px;
+  font-style: italic;
+  letter-spacing: 0.65;
+}
+
+.balanceAmount {
+  font-weight: bold;
+  color: #e0766c;
+}
+
+.positive {
+  color: #5bbe72;
+}

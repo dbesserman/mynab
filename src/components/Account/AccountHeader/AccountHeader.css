@@ -1,0 +1,42 @@
+.AccountHeader {
+  display: flex;
+  width: 100%;
+  height: 67px;
+  padding: 0 12px;
+  background: #003540;
+  align-items: center;
+}
+
+.accountNameContent {
+  display: inline-block;
+  background-color: #16a338;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.accountName {
+  color: #fff;
+  font-weight: bold;
+}
+
+.accountNamePointer {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  left: -6px;
+  position: relative;
+  transform: rotate(45deg);
+  background-color: #16a338;
+}
+
+.balances {
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+
+.balanceOperator {
+  color: #588697;
+  font-weight: bold;
+  font-size: 16px;
+}
