@@ -1,8 +1,8 @@
 .Main {
   display: inline-block;
-  width: 100%;
   position: absolute;
   top: 0;
-  left: 255px;
+  right: 0;
   bottom: 0;
+  left: 255px;
 }

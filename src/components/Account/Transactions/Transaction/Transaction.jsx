@@ -1,26 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classes from './Transaction.css';
+import { formatAmount } from '../../../../helpers';
 
 class Transaction extends React.Component {
   dateInFuture(date) {
-    return date > new Date;
+    return date > new Date();
   }
 
   dateInPast(date) {
     return !this.dateInFuture(date);
   }
 
-  formatAmount(cents) {
-    if (cents === 0 || cents === undefined) {
-      return null;
-    }
-
-    return `${Math.abs(cents) / 100} €`;
-  }
-
   formatDate = (date) => {
-    return `${this.formatDateInt(date.getDay() + 1)}/` +
+    return `${this.formatDateInt(date.getDate())}/` +
       `${this.formatDateInt(date.getMonth() + 1)}/` +
       `${date.getFullYear()}`;
   }
@@ -57,10 +50,10 @@ class Transaction extends React.Component {
         <td className={classes.category}><span>{this.props.category}</span></td>
         <td className={classes.memo}><span>{this.props.memo}</span></td>
         <td className={classes.amount}>
-          <span>{this.props.variation < 0 ? this.formatAmount(this.props.variation) : null}</span>
+          <span>{this.props.variation < 0 ? formatAmount(this.props.variation) : null}</span>
         </td>
         <td className={classes.amount}>
-          <span>{this.props.variation > 0 ? this.formatAmount(this.props.variation) : null}</span>
+          <span>{this.props.variation > 0 ? formatAmount(this.props.variation) : null}</span>
         </td>
         <td className={classes.clearance}>
           {

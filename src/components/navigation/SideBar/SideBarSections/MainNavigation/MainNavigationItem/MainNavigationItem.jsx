@@ -1,23 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import classes from './MainNavigationItem.css';
 
 class MainNavigationItem extends React.Component {
   render() {
-    let itemClasses = [classes.MainNavigationItem, classes[this.props.itemName]];
-
-    if (this.props.itemName === this.props.currentActiveItemName) {
-      itemClasses.push(classes.active);
-    }
-
     return (
       <li
-        className={itemClasses.join(' ')}
-        name={this.props.itemName}
-        onClick={(e) => this.props.activeItemHandler(e, this.props.itemName)}
+        className={`${classes.MainNavigationItem}  ${classes[this.props.itemName]}`}
       >
-        <i className="icon-budget"></i>
-        <span>{this.props.title}</span>
+        <NavLink to={this.props.path} activeClassName={classes.active}>
+          <i></i>
+          <span>{this.props.title}</span>
+        </NavLink>
       </li>
     )
   }
@@ -25,9 +20,7 @@ class MainNavigationItem extends React.Component {
 
 MainNavigationItem.propTypes = {
   title: PropTypes.string.isRequired,
-  itemName: PropTypes.string.isRequired,
-  currentActiveItemName: PropTypes.string.isRequired,
-  activeItemHandler: PropTypes.func.isRequired,
+  path: PropTypes.string.isRequired,
 }
 
 export default MainNavigationItem;

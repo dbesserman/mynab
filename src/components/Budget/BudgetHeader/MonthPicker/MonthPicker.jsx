@@ -9,11 +9,12 @@ class MonthPicker extends React.Component {
       <div className={classes.MonthPicker}>
         <i
           className={classes.PrevMonth}
-          onClick={this.props.previousMonthOfYear}
+          onClick={this.props.selectPreviousMonth}
         ></i>
-        <span>{this.props.currentMonth.toString()}</span>
-        <i className={classes.NextMonth}
-          onClick={this.props.nextMonth}
+        <span>{this.props.selectedMonth.toString()}</span>
+        <i
+          className={classes.NextMonth}
+          onClick={this.props.selectNextMonth}
         ></i>
       </div>
     )
@@ -22,7 +23,7 @@ class MonthPicker extends React.Component {
 
 MonthPicker.propTypes = {
   previousMonthOfYear: PropTypes.func,
-  currentMonth: PropTypes.instanceOf(Month),
+  selectedMonth: PropTypes.instanceOf(Month),
   nextMonth: PropTypes.func,
 }
 

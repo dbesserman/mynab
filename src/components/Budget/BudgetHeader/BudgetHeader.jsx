@@ -5,11 +5,11 @@ import classes from './BudgetHeader.css';
 
 const budgetHeader = (props) => {
   return (
-    <header className={classes.BudgetHeader} currentMonth={props.currentMonth}>
+    <header className={classes.BudgetHeader}>
       <MonthPicker
-        currentMonth={props.currentMonth}
-        previousMonthOfYear={props.previousMonthOfYear}
-        nextMonth={props.nextMonth}
+        selectedMonth={props.selectedMonth}
+        selectPreviousMonth={props.selectPreviousMonth}
+        selectNextMonth={props.selectNextMonth}
       />
       <ToBeBudgeted amount={props.toBeBudgeted} />
       <div className={classes.placeholder}></div>

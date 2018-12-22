@@ -1,5 +1,6 @@
 .MonthPicker {
   display: flex;
+  width: 200px;
   color: #fff;
   align-items: center;
 }
@@ -16,7 +17,9 @@
   width: 36px;
   border-radius: 100%;
   border: 3px solid #23b2ce;
+  cursor: pointer;
 }
+
 .NextMonth {
   background: url(../../../../assets/icons/chevron-right.svg);
 }

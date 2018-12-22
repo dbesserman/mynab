@@ -1,15 +1,20 @@
 import React from 'react';
 import classes from './ToBeBudgeted.css';
+import { formatAmount } from '../../../../helpers';
 
 class ToBeBudgeted extends React.Component {
-  formatAmount = amount => `${amount / 100}€`
-
   render() {
+    const componentClasses = [classes.ToBeBudgeted]
+
+    if (this.props.amount < 0) {
+      componentClasses.push(classes.negative)
+    }
+
     return (
-      <div className={classes.ToBeBudgeted}>
+      <div className={componentClasses.join(' ')}>
           <div className={classes.content}>
             <span className={classes.amount}>
-              {this.formatAmount(this.props.amount)}
+              {formatAmount(this.props.amount)}
             </span>
             <span className={classes.caption}>To be Budgeted</span>
           </div>

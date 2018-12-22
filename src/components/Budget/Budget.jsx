@@ -1,14 +1,20 @@
 import React from 'react';
 import BudgetHeader from './BudgetHeader/BudgetHeader.jsx';
+import Budgets from './Budgets/Budgets.jsx';
 
 const budget = (props) => {
   return (
     <>
       <BudgetHeader
-        currentMonth={props.currentMonth}
-        previousMonthOfYear={props.previousMonthOfYear}
-        nextMonth={props.nextMonth}
+        selectedMonth={props.selectedMonth}
+        selectPreviousMonth={props.selectPreviousMonth}
+        selectNextMonth={props.selectNextMonth}
         toBeBudgeted={props.toBeBudgeted}
+      />
+      <Budgets
+        groups={props.groups}
+        selectedMonth={props.selectedMonth}
+        transactions={props.transactions}
       />
     </>
   )

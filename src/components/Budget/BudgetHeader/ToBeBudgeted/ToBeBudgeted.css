@@ -3,6 +3,11 @@
   align-items: center;
 }
 
+.ToBeBudgeted.negative .content,
+.ToBeBudgeted.negative .pointer {
+  background: #d33c2d; 
+}
+
 .content, .pointer {
   background-color: #16a33e;
 }

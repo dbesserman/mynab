@@ -1,0 +1,36 @@
+.Budgets {
+  width: 100%;
+}
+
+.Budgets thead tr {
+  height: 38px;
+  border-top: 1px solid #dee3e8;
+  border-bottom: 1px solid #dee3e8;
+}
+
+.Budgets th {
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: left;
+  vertical-align: middle;
+  color: #4c7079;
+}
+
+/* columns sizes */
+.category {
+  width: 50%;
+}
+
+.amount {
+  width: 15%;
+}
+
+.available {
+  width: 20%;
+}
+
+.Budgets .textRight {
+  text-align: right;
+}

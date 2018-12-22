@@ -1,0 +1,31 @@
+.BudgetCategory {
+  height: 28px;
+  border-bottom: 1px solid #dee3e8;
+}
+
+.BudgetCategory td {
+  padding: 0 12px;
+  vertical-align: middle;
+}
+
+.BudgetCategory .textRight {
+  text-align: right;
+}
+
+.BudgetCategory .RemainingAmount {
+  padding: 1.5px 6px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.BudgetCategory .RemainingAmount.positive {
+  background: #16a336;
+}
+
+.BudgetCategory .RemainingAmount.zero {
+  background: #cfd5d8;
+}
+
+.BudgetCategory .RemainingAmount.negative {
+  background: #d33c2d;
+}

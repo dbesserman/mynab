@@ -10,14 +10,12 @@ const mainNavigation = (props) => {
           <MainNavigationItem
             title="budget"
             itemName="budget"
-            currentActiveItemName={props.currentActiveItemName}
-            activeItemHandler={props.activeItemHandler}
+            path="/budget"
           />
           <MainNavigationItem
             title="all accounts"
             itemName="accounts"
-            currentActiveItemName={props.currentActiveItemName}
-            activeItemHandler={props.activeItemHandler}
+            path="/accounts"
           />
         </ul>
       </nav>

@@ -6,10 +6,7 @@ const sideBarSections = (props) => {
   return (
     <>
       <ul className={classes.SideBarSections}>
-        <MainNavigation
-          currentActiveItemName={props.currentActiveItemName}
-          activeItemHandler={props.activeItemHandler}
-        />
+        <MainNavigation />
       </ul>
     </>
   )
