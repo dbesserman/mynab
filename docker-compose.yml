@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mynab_api:
+    image: 'dbesserman/mynab_api:latest'
+    build: ../mynab_api/.
+    ports:
+      - '3001:3001'
+  mynab_front:
+    image: 'dbesserman/mynab_front:latest'
+    build: .
+    ports:
+      - '80:3000'
